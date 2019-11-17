@@ -1,5 +1,5 @@
 var loginPO = function(){
-var credentialsData = require('../json/credentials.json');
+var data = require('../json/credentials.json');
 var base = require('./basePagePO.js');
 
     this.loginButton = element(by.id('gw_login_06_sign_in'));
@@ -15,7 +15,7 @@ var base = require('./basePagePO.js');
     }
 
     this.passwordToLogin = function(){
-        element(by.id('5')).sendKeys(credentialsData.password);
+        element(by.id('5')).sendKeys(data.password);
     }
 
     this.submitLogin = function(){
