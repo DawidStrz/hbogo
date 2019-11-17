@@ -1,0 +1,17 @@
+{
+  "name": "automateregistrationjs",
+  "version": "0.0.7",
+  "description": "",
+  "main": "conf.js",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "protractor": "^5.4.2"
+  },
+  "scripts": {
+    "test": "protractor conf.js",
+    "testloc": "node node_modules/protractor/bin/protractor conf.js",
+    "postinstall": "node node_modules/protractor/bin/webdriver-manager update"
+  },
+  "author": "Strz",
+  "license": "ISC"
+}
