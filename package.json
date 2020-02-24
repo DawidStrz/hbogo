@@ -5,7 +5,8 @@
   "main": "conf.js",
   "dependencies": {
     "faker": "^4.1.0",
-    "protractor": "^5.4.2"
+    "protractor": "^5.4.2",
+    "prettier": "1.19.1"
   },
   "scripts": {
     "test": "protractor conf.js",

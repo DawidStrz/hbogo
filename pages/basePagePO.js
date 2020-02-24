@@ -1,27 +1,31 @@
-var basePagePO = function(){
+var basePagePO = function () {
+    var EC = protractor.ExpectedConditions;
 
-    this.navigateToURL = async function(url){
+    this.navigateToURL = async function (url) {
         await browser.get(url);
     }
 
-    this.getPageTitle = function(){
+    this.getPageTitle = function () {
         return browser.getTitle();
     }
 
-    this.switchFrame = function (frame){
+    this.switchFrame = function (frame) {
         return browser.driver.switchTo().frame(frame);
-    } 
-
-    this.isElementVisible = function(element){
-        var EC = protractor.ExpectedConditions;
-        let elementToBeVisible = EC.visibilityOf(element); 
-        browser.wait(elementToBeVisible,20000);
     }
 
-    this.isElementClickable = function(element){
-        var EC = protractor.ExpectedConditions;
-        let elementToBeClickable = EC.elementToBeClickable(element); 
-        browser.wait(elementToBeClickable,20000);
+    this.isElementVisible = function (element) {
+        let elementToBeVisible = EC.visibilityOf(element);
+        browser.wait(elementToBeVisible, 9000);
+    }
+
+    this.isElementInvisible = function (element) {
+        let elementToBeInvisible = EC.invisibilityOf(element);
+        browser.wait(elementToBeInvisible, 9000);
+    }
+
+    this.isElementClickable = function (element) {
+        let elementToBeClickable = EC.elementToBeClickable(element);
+        browser.wait(elementToBeClickable, 9000);
     }
 }
 module.exports = new basePagePO();
