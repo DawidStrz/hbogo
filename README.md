@@ -8,7 +8,7 @@ JDK
 Chrome  
 
 ## Configuration
-1. `npm init` in the main directory.
+1. `npm install` in the main directory.
 2. Change data in `json/credentials.json`.
 
 ## Running the script
